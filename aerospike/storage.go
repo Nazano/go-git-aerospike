@@ -6,10 +6,10 @@ import (
 	"io"
 	"io/ioutil"
 
-	"gopkg.in/src-d/go-git.v4/config"
-	"gopkg.in/src-d/go-git.v4/plumbing"
-	"gopkg.in/src-d/go-git.v4/plumbing/format/index"
-	"gopkg.in/src-d/go-git.v4/plumbing/storer"
+	"github.com/src-d/go-git/config"
+	"github.com/src-d/go-git/plumbing"
+	"github.com/src-d/go-git/plumbing/format/index"
+	"github.com/src-d/go-git/plumbing/storer"
 
 	driver "github.com/aerospike/aerospike-client-go"
 )

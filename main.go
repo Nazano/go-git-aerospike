@@ -1,13 +1,14 @@
 package main
 
 import (
+	"aerospike/storage/aerospike"
 	"fmt"
 	"os"
 	"strings"
 
-	"github.com/mcuadros/go-git-aerospike/aerospike"
-	"srcd.works/go-git.v4"
-	. "srcd.works/go-git.v4/_examples"
+	"github.com/Nazano/go-git-aerospike"
+	"gopkg.in/src-d/go-git.v4"
+	. "gopkg.in/src-d/go-git.v4/_examples"
 
 	driver "github.com/aerospike/aerospike-client-go"
 )

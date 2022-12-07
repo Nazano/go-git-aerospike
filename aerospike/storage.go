@@ -129,7 +129,7 @@ func (s *Storage) encodedObjectType(h plumbing.Hash) (plumbing.ObjectType, error
 }
 func (s *Storage) IterEncodedObjects(t plumbing.ObjectType) (storer.EncodedObjectIter, error) {
 	stmnt := driver.NewStatement(s.ns, t.String())
-	err := stmnt.Addfilter(driver.NewEqualFilter(urlField, s.url))
+	err := stmnt.SetFilter(driver.NewEqualFilter(urlField, s.url))
 
 	rs, err := s.client.Query(nil, stmnt)
 	if err != nil {
@@ -242,7 +242,7 @@ func (s *Storage) buildReferenceKey(n plumbing.ReferenceName) (*driver.Key, erro
 
 func (s *Storage) IterReferences() (storer.ReferenceIter, error) {
 	stmnt := driver.NewStatement(s.ns, referencesSet)
-	err := stmnt.Addfilter(driver.NewEqualFilter(urlField, s.url))
+	err := stmnt.SetFilter(driver.NewEqualFilter(urlField, s.url))
 	if err != nil {
 		return nil, err
 	}

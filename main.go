@@ -1,12 +1,11 @@
 package main
 
 import (
-	"aerospike/storage/aerospike"
 	"fmt"
 	"os"
 	"strings"
 
-	"github.com/Nazano/go-git-aerospike"
+	"github.com/Nazano/go-git-aerospike/aerospike"
 	"gopkg.in/src-d/go-git.v4"
 	. "gopkg.in/src-d/go-git.v4/_examples"
 
